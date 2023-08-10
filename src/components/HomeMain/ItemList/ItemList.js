@@ -6,7 +6,7 @@ const ItemList = (props) => {
   return (
     <S.ItemList>
       {props.data.map((item) => (
-        <Item number={item} />
+        <Item key={item} number={item} />
       ))}
     </S.ItemList>
   );

@@ -11,4 +11,5 @@ export const ItemList = styled.div`
   margin-bottom: 8rem;
   margin-left: 3rem;
   margin-right: 3rem;
+  z-index: -1;
 `;
