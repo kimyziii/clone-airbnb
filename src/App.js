@@ -1,15 +1,27 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Reset } from "styled-reset";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import HomeMain from "./components/HomeMain/HomeMain";
+import data from "./data/airbnb.json";
 function App() {
-  const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  // const [data, setData] = useState([]);
+  // useEffect(() => {
+  //   fetch("/data/airbnb.json")
+  //     .then((res) => {
+  //       console.log(res);
+  //       res.json();
+  //     })
+  //     .then(setData);
+  // }, []);
+
+  console.log(data);
+
   return (
     <React.Fragment>
       <Reset />
       <Header />
-      <HomeMain data={array} />
+      <HomeMain data={data.data} />
       <Footer />
     </React.Fragment>
   );
