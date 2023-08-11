@@ -14,7 +14,7 @@ export const AuthMenu = styled.div`
   justify-items: baseline;
   align-items: center;
 
-  button {
+  div {
     width: 100%;
     border: none;
     background-color: white;

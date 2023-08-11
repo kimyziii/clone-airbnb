@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import * as S from "../../styles/Modal/Register.style";
 import Backdrop from "./Backdrop";
+import Modal from "./Modal";
 
-const Register = (props) => {
+const ModalWrapper = (props) => {
   return (
     <>
       {ReactDOM.createPortal(
@@ -11,11 +11,11 @@ const Register = (props) => {
         document.getElementById("backdrop-root")
       )}
       {ReactDOM.createPortal(
-        <S.Container />,
+        <Modal />,
         document.getElementById("overlay-root")
       )}
     </>
   );
 };
 
-export default Register;
+export default ModalWrapper;

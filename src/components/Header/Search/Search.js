@@ -1,6 +1,6 @@
 import React from "react";
 import Query from "./Query";
-import { ReactComponent as Icon } from "./Icon.svg";
+import { ReactComponent as Icon } from "../svg/Icon.svg";
 import * as S from "../../../styles/Header/Search.style";
 
 const Search = () => {
