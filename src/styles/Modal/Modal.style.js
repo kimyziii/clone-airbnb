@@ -13,9 +13,9 @@ export const Modal = styled.div`
 `;
 
 export const Title = styled.div`
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   border-bottom: 1px solid lightgray;
-  font-weight: 700;
+  font-weight: 600;
   height: 3rem;
   display: flex;
   justify-content: center;
@@ -63,6 +63,7 @@ export const InputWrapper = styled.div`
     padding-top: 0.5rem;
     padding-bottom: 0.1rem;
     font-size: 0.7rem;
+    color: #656565;
   }
 
   input {
