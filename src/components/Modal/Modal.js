@@ -11,7 +11,7 @@ const Modal = (props) => {
           <S.InputWrapper>
             <label htmlFor="region">국가/지역</label>
             <select>
-              <option>대한민국</option>
+              <option>한국 (+82)</option>
             </select>
           </S.InputWrapper>
           <S.InputWrapper>

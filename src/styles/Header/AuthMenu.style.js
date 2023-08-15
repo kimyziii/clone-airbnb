@@ -3,7 +3,7 @@ import { styled } from "styled-components";
 export const AuthMenu = styled.div`
   position: absolute;
   top: 4rem;
-  right: 2rem;
+  right: 4rem;
   width: 10rem;
   height: 5rem;
   border: 1px solid #e3e3e3;
@@ -15,7 +15,7 @@ export const AuthMenu = styled.div`
   align-items: center;
 
   div {
-    width: 100%;
+    width: 80%;
     border: none;
     background-color: white;
     cursor: pointer;

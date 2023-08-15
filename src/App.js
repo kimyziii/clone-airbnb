@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Reset } from "styled-reset";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
+import NewHeader from "./components/Header/NewHeader";
 import HomeMain from "./components/HomeMain/HomeMain";
 import data from "./data/airbnb.json";
 function App() {
@@ -21,7 +22,8 @@ function App() {
     <React.Fragment>
       <Reset />
       <Header />
-      <HomeMain data={data.data} />
+      <NewHeader />
+      {/* <HomeMain data={data.data} /> */}
       <Footer />
     </React.Fragment>
   );

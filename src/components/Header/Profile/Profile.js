@@ -15,11 +15,10 @@ const Profile = () => {
   };
 
   const blurHandler = () => {
-    // setMenuOpen(false);
+    setMenuOpen(false);
   };
 
   const modalOpenHandler = () => {
-    console.log(`열려야됨`);
     setModalOpen(true);
     setMenuOpen(false);
   };
@@ -29,14 +28,14 @@ const Profile = () => {
 
   return (
     <>
-      <S.Profile tabIndex={1} onBlur={blurHandler} onClick={clickHandler}>
+      <S.Profile tabIndex={1} onClick={clickHandler}>
         <Bar width="20" height="20" stroke="#646464" />
         <User width="30" height="30" stroke="#646464" fill="#646464" />
       </S.Profile>
       {menuOpen && (
         <AuthMenu
           modalOpenHandler={modalOpenHandler}
-          onBlur={modalCloseHandler}
+          blurHandler={blurHandler}
         />
       )}
       {modalOpen && <ModalWrapper handleSignUpClose={modalCloseHandler} />}

@@ -1,15 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import Logo from "./Logo/Logo";
-import Auth from "./Profile/Profile";
+import Profile from "./Profile/Profile";
 import Search from "./Search/Search";
 import * as S from "../../styles/Header/Header.style";
 
 const Header = (props) => {
+  const [isOpenSearchModal, setIsOpenSearchModal] = useState(false);
+  const clickHandler = () => {
+    setIsOpenSearchModal((prevState) => !prevState);
+  };
+
   return (
     <S.Wrapper>
       <Logo />
-      <Search />
-      <Auth />
+      <S.SearchWrapper>
+        <Search onClick={clickHandler} />
+        {isOpenSearchModal && <S.SearhModal />}
+      </S.SearchWrapper>
+      <Profile />
     </S.Wrapper>
   );
 };

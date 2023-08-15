@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Item = styled.div`
-  height: 19rem;
+  height: 22rem;
   width: inherit;
   overflow: hidden;
   display: flex;
@@ -12,7 +12,7 @@ export const Item = styled.div`
 
 export const Image = styled.div`
   width: 90%;
-  height: 80%;
+  height: 100%;
   border-radius: 10px;
   background-size: cover; /* 배경 이미지 크기 조절 (가득 채우기) */
   background-position: center center; /* 배경 이미지 중앙 정렬 */

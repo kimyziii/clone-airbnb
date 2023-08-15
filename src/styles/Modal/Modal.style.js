@@ -61,9 +61,8 @@ export const InputWrapper = styled.div`
   label {
     position: relative;
     padding-top: 0.5rem;
-    padding-bottom: 0.1rem;
     font-size: 0.7rem;
-    color: #656565;
+    color: #737373;
   }
 
   input {
@@ -71,6 +70,7 @@ export const InputWrapper = styled.div`
     border: none;
     height: 100%;
     font-size: 1rem;
+    background: transparent;
 
     &:focus {
       outline: none;
@@ -80,6 +80,8 @@ export const InputWrapper = styled.div`
   select {
     border: none;
     padding-top: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 400;
   }
 `;
 
