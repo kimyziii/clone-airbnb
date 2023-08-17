@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.div`
+export const NewWrapper = styled.div`
   background-color: white;
-  padding: 0 4rem;
-  height: 5rem;
+  padding: 1rem 4rem;
+  height: 3rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   border-bottom: 1px solid lightgray;
   position: fixed;
   top: 0px;
@@ -16,40 +16,22 @@ export const Wrapper = styled.div`
   z-index: 1;
 `;
 
-export const SearchWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  top: 2rem;
-  width: 12rem;
-`;
-
-export const SearhModal = styled.div`
-  width: 40rem;
-  height: 4rem;
-  position: relative;
-  top: 1rem;
-  left: -15rem;
-  background-color: lightgray;
-  border-radius: 5rem;
-`;
-
-// -------------------------------------
-export const NewWrapper = styled.div`
+export const NewModalWrapper = styled.div`
   background-color: white;
-  padding: 2.5rem 4rem 0 4rem;
-  height: 5rem;
+  padding: 2rem 4rem;
+  height: 6rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
   border-bottom: 1px solid lightgray;
-  border: 1px solid blue;
   position: fixed;
-  top: 7rem;
+  top: 0px;
   right: 0px;
   left: 0px;
-  z-index: 1;
+
+  z-index: 100;
+  overflow: hidden;
 `;
 
 export const NewSearchWrapper = styled.div`
@@ -58,7 +40,6 @@ export const NewSearchWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  border: 1px solid red;
 `;
 
 export const NewSearch = styled.div`
@@ -70,15 +51,17 @@ export const NewSearch = styled.div`
   display: flex;
   gap: 10px;
   align-items: center;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
 
   div {
     position: relative;
     font-size: small;
-    left: 20px;
+    left: 10px;
     cursor: pointer;
 
     &:nth-last-of-type(1) {
-      margin-right: 1rem;
+      margin-right: 1.5rem;
     }
   }
 `;
@@ -92,6 +75,7 @@ export const NewSearchModal = styled.div`
   min-height: 3rem;
   border: 1px solid lightgray;
   border-radius: 2rem;
+  background-color: #ededed;
 
   display: flex;
 `;
@@ -103,47 +87,52 @@ export const NewSearchModalLocationWrapper = styled.div`
 `;
 
 export const NewSearchModalLocation = styled.div`
-  border: 2px solid black;
-  height: 3rem;
+  height: 3.2rem;
   position: relative;
   top: -2px;
   left: -2px;
   width: 100%;
   border-radius: 1.5rem;
   background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
   display: flex;
   flex-direction: column;
   font-size: x-small;
 
   label {
-    margin-left: 15px;
-    margin-top: 6px;
+    margin-left: 18px;
+    margin-top: 8px;
     font-weight: 800;
   }
 
   input {
     width: 80%;
     margin-left: 15px;
-    margin-top: 7px;
+    margin-top: 5px;
+    padding-left: 5px;
     border: none;
   }
 `;
 export const NewSearchModalLocationModal = styled.div`
-  border: 1px solid green;
   height: 18rem;
-  width: 160%;
+  width: 30%;
   margin-top: 12px;
   border-radius: 2rem;
+  background-color: white;
+  position: fixed;
+  z-index: 100;
 `;
 export const NewSearchModalPriceWrapper = styled.div`
   position: relative;
-  width: 40%;
+  width: 45%;
+  left: 40%;
   height: 3rem;
+  display: flex;
+  justify-content: center;
 `;
 export const NewSearchModalPrice = styled.div`
-  border: 2px solid red;
-  height: 3rem;
+  height: 3.2rem;
   position: relative;
   top: -2px;
   left: 2px;
@@ -151,38 +140,52 @@ export const NewSearchModalPrice = styled.div`
   border-radius: 1.5rem;
   background-color: white;
 
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
   display: flex;
   flex-direction: row;
   font-size: x-small;
 `;
 
 export const NewSearchModalPriceType = styled.div`
-  width: 50%;
-  border: 1px solid yellow;
+  width: 55%;
   height: 97%;
   border-radius: 2rem;
 
   label {
-    font-size: x-small;
+    margin-left: 15px;
+    position: relative;
+    top: 9px;
+    left: 4px;
     font-weight: 800;
-    position: fixed;
-    margin: 5px 10px;
   }
 
   input {
-    width: 70%;
-    margin-left: 10px;
-    margin-top: 18px;
+    width: 80%;
+    margin-left: 12px;
+    position: relative;
+    top: 12px;
     border: none;
   }
 `;
 export const NewSearchModalPriceModal = styled.div`
-  border: 1px solid brown;
   height: 10rem;
-  width: 200%;
+  width: 40%;
   margin-top: 12px;
   border-radius: 2rem;
+  position: fixed;
+  top: 9rem;
+  z-index: 100;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+`;
 
-  position: relative;
-  left: -50%;
+export const Backdrop = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.35);
 `;
