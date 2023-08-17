@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Auth = styled.div`
+export const Profile = styled.div`
   border: 1px solid lightgray;
   padding: 3px 6px 3px 12px;
   justify-content: center;

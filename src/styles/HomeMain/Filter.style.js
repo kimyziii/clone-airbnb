@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const Filter = styled.div`
   position: fixed;
-  position: fixed;
   height: 6rem;
   display: flex;
   align-items: center;

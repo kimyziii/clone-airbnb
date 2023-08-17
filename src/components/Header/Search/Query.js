@@ -1,7 +1,7 @@
 import React from "react";
 import * as S from "../../../styles/Header/Search.style";
 
-const Query = () => {
+const Query = (props) => {
   return (
     <S.Text>
       <div>어디든지</div>

@@ -19,55 +19,55 @@ const Filter = () => {
   return (
     <S.Filter>
       <S.FilterItemWrapper>
-        <Fire width="50" height="50" />
+        <Fire width="40" height="40" />
         <div style={{ position: "relative", top: "-5px" }}>인기 급상승</div>
       </S.FilterItemWrapper>
       <S.FilterItemWrapper>
-        <Pool width="40" height="40" />
+        <Pool width="30" height="30" />
         <div>멋진 수영장</div>
       </S.FilterItemWrapper>
       <S.FilterItemWrapper>
-        <Camping width="40" height="40" />
+        <Camping width="30" height="30" />
         <div>캠핑장</div>
       </S.FilterItemWrapper>
       <S.FilterItemWrapper>
-        <Surfing width="40" height="40" />
+        <Surfing width="30" height="30" />
         <div>서핑</div>
       </S.FilterItemWrapper>
       <S.FilterItemWrapper>
-        <Beach width="40" height="40" />
+        <Beach width="30" height="30" />
         <div>해변 바로 앞</div>
       </S.FilterItemWrapper>
       <S.FilterItemWrapper>
-        <UFO width="40" height="40" />
+        <UFO width="30" height="30" />
         <div>기상천외한 숙소</div>
       </S.FilterItemWrapper>
       <S.FilterItemWrapper>
-        <Bowling width="40" height="40" />
+        <Bowling width="30" height="30" />
         <div>키즈</div>
       </S.FilterItemWrapper>
       <S.FilterItemWrapper>
-        <Ski width="40" height="40" />
+        <Ski width="30" height="30" />
         <div>스키</div>
       </S.FilterItemWrapper>
       <S.FilterItemWrapper>
-        <Pisa width="40" height="40" />
+        <Pisa width="30" height="30" />
         <div>상징적 도시</div>
       </S.FilterItemWrapper>
       <S.FilterItemWrapper>
-        <Desert width="40" height="40" />
+        <Desert width="30" height="30" />
         <div>사막</div>
       </S.FilterItemWrapper>
       <S.FilterItemWrapper>
-        <Golf width="40" height="40" />
+        <Golf width="30" height="30" />
         <div>골프</div>
       </S.FilterItemWrapper>
       <S.FilterItemWrapper>
-        <Castle width="40" height="40" />
+        <Castle width="30" height="30" />
         <div>성</div>
       </S.FilterItemWrapper>
       <S.FilterItemWrapper>
-        <Farm width="40" height="40" />
+        <Farm width="30" height="30" />
         <div>농장</div>
       </S.FilterItemWrapper>
     </S.Filter>
