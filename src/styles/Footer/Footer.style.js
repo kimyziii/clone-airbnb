@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
   gap: 1rem;
   width: 100vw;
   height: 7rem;
-  position: fixed;
+  // position: fixed;
   bottom: 0px;
   border-top: 1px solid lightgray;
   background-color: white;

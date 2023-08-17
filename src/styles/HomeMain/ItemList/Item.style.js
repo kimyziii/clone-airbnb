@@ -20,6 +20,10 @@ export const Image = styled.div`
 `;
 
 export const Title = styled.div`
+  width:300px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
   font-size: 0.9rem;
   align-self: baseline;
   margin-left: 1.2rem;

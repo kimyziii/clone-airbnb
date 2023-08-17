@@ -19,20 +19,28 @@ const Filter = () => {
   return (
     <S.Filter>
       <S.FilterItemWrapper>
-        <Pool width="40" height="40" />
-        <div>멋진 수영장</div>
-      </S.FilterItemWrapper>
-      <S.FilterItemWrapper>
         <Fire width="50" height="50" />
         <div style={{ position: "relative", top: "-5px" }}>인기 급상승</div>
       </S.FilterItemWrapper>
       <S.FilterItemWrapper>
-        <UFO width="40" height="40" />
-        <div>기상천외한 숙소</div>
+        <Pool width="40" height="40" />
+        <div>멋진 수영장</div>
       </S.FilterItemWrapper>
       <S.FilterItemWrapper>
         <Camping width="40" height="40" />
         <div>캠핑장</div>
+      </S.FilterItemWrapper>
+      <S.FilterItemWrapper>
+        <Surfing width="40" height="40" />
+        <div>서핑</div>
+      </S.FilterItemWrapper>
+      <S.FilterItemWrapper>
+        <Beach width="40" height="40" />
+        <div>해변 바로 앞</div>
+      </S.FilterItemWrapper>
+      <S.FilterItemWrapper>
+        <UFO width="40" height="40" />
+        <div>기상천외한 숙소</div>
       </S.FilterItemWrapper>
       <S.FilterItemWrapper>
         <Bowling width="40" height="40" />
@@ -41,10 +49,6 @@ const Filter = () => {
       <S.FilterItemWrapper>
         <Ski width="40" height="40" />
         <div>스키</div>
-      </S.FilterItemWrapper>
-      <S.FilterItemWrapper>
-        <Surfing width="40" height="40" />
-        <div>서핑</div>
       </S.FilterItemWrapper>
       <S.FilterItemWrapper>
         <Pisa width="40" height="40" />
@@ -61,10 +65,6 @@ const Filter = () => {
       <S.FilterItemWrapper>
         <Castle width="40" height="40" />
         <div>성</div>
-      </S.FilterItemWrapper>
-      <S.FilterItemWrapper>
-        <Beach width="40" height="40" />
-        <div>해변 바로 앞</div>
       </S.FilterItemWrapper>
       <S.FilterItemWrapper>
         <Farm width="40" height="40" />
