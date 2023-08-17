@@ -13,7 +13,7 @@ export const NewWrapper = styled.div`
   top: 0px;
   right: 0px;
   left: 0px;
-  z-index: 1;
+  z-index: 2;
 `;
 
 export const NewModalWrapper = styled.div`
