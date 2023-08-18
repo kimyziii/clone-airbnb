@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Reset } from "styled-reset";
 import Footer from "./components/Footer/Footer";
 import NewHeader from "./components/Header/NewHeader";
@@ -8,6 +8,21 @@ import DetailPage from "./components/DetailPage/DetailPage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
+  const [dataList, setDataList] = useState([]);
+  const getDataList = () => {
+    fetch("http://localhost:3000/data/airbnb.json", {
+      method: "GET",
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        setDataList(data.data);
+      });
+  };
+
+  useEffect(() => {
+    getDataList();
+  }, [dataList.length]);
+
   const [modal, setModal] = useState(false);
   const modalhandler = () => {
     setModal((prevModalState) => !prevModalState);
@@ -56,12 +71,13 @@ function App() {
             modalhandler={modalhandler}
             locationModal={locationModal}
             priceModal={priceModal}
+            data={dataList}
             setLocationModalOpen={locationModalHandler}
             setPriceModalOpen={priceModalHandler}
           />
         )}
         <Routes>
-          <Route path="/" element={<HomeMain />}></Route>
+          <Route path="/" element={<HomeMain data={dataList} />}></Route>
           <Route path="/detailpage/:itemId" element={<DetailPage />}></Route>
         </Routes>
         <Footer />
