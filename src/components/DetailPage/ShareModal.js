@@ -10,7 +10,7 @@ const ShareModal = ({setModalOpen}) => {
     // 클립 보드 복사 기능 생성 
 
     const location = useLocation();
-    const baseUrl = 'http://localhost:3000';
+    const baseUrl = 'https://clone-airbnb-nine.vercel.app/';
     console.log(location);
     const handleCopyClipBoard = async (text) => {
         try {
