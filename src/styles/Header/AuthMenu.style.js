@@ -13,6 +13,7 @@ export const AuthMenu = styled.div`
   font-size: 0.8rem;
   justify-items: baseline;
   align-items: center;
+  z-index: 10;
 
   div {
     width: 80%;

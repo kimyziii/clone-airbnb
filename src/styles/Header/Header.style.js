@@ -13,7 +13,7 @@ export const NewWrapper = styled.div`
   top: 0px;
   right: 0px;
   left: 0px;
-  z-index: 2;
+  z-index: 3;
 `;
 
 export const NewModalWrapper = styled.div`
@@ -87,9 +87,9 @@ export const NewSearchModalLocationWrapper = styled.div`
 `;
 
 export const NewSearchModalLocation = styled.div`
-  height: 3.2rem;
+  height: 3.3rem;
   position: relative;
-  top: -2px;
+  top: -1px;
   left: -2px;
   width: 100%;
   border-radius: 1.5rem;
@@ -102,7 +102,7 @@ export const NewSearchModalLocation = styled.div`
 
   label {
     margin-left: 18px;
-    margin-top: 8px;
+    margin-top: 11px;
     font-weight: 800;
   }
 
@@ -114,23 +114,69 @@ export const NewSearchModalLocation = styled.div`
     border: none;
   }
 `;
+
+export const NewSearchModalLocation_BG = styled.div`
+  height: 3.3rem;
+  position: relative;
+  top: -1px;
+  left: -2px;
+  width: 100%;
+  border-radius: 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+  font-size: x-small;
+
+  label {
+    margin-left: 18px;
+    margin-top: 11px;
+    font-weight: 800;
+  }
+
+  input {
+    width: 80%;
+    margin-left: 15px;
+    margin-top: 5px;
+    padding-left: 5px;
+    border: none;
+    background: none;
+  }
+`;
 export const NewSearchModalLocationModal = styled.div`
-  height: 18rem;
+  height: 23rem;
   width: 30%;
   margin-top: 12px;
   border-radius: 2rem;
   background-color: white;
   position: fixed;
   z-index: 100;
+  padding: 1rem 2rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  span {
+    font-size: small;
+    font-weight: 600;
+  }
 `;
 export const NewSearchModalPriceWrapper = styled.div`
   position: relative;
   width: 45%;
-  left: 40%;
+  // left: 40%;
   height: 3rem;
   display: flex;
   justify-content: center;
 `;
+
+export const NewSearchModalPriceWrapper_BG = styled.div`
+  position: relative;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+`;
+
 export const NewSearchModalPrice = styled.div`
   height: 3.2rem;
   position: relative;
@@ -147,6 +193,20 @@ export const NewSearchModalPrice = styled.div`
   font-size: x-small;
 `;
 
+export const NewSearchModalPrice_BG = styled.div`
+  height: 3.2rem;
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  font-size: x-small;
+
+  input {
+    background: none;
+    color: gray;
+  }
+`;
+
 export const NewSearchModalPriceType = styled.div`
   width: 55%;
   height: 97%;
@@ -155,22 +215,23 @@ export const NewSearchModalPriceType = styled.div`
   label {
     margin-left: 15px;
     position: relative;
-    top: 9px;
+    top: 11px;
     left: 4px;
     font-weight: 800;
   }
 
   input {
-    width: 80%;
+    width: 70%;
     margin-left: 12px;
     position: relative;
-    top: 12px;
+    top: 14px;
+    left: 5px;
     border: none;
   }
 `;
 export const NewSearchModalPriceModal = styled.div`
   height: 10rem;
-  width: 40%;
+  width: 30%;
   margin-top: 12px;
   border-radius: 2rem;
   position: fixed;
@@ -178,6 +239,57 @@ export const NewSearchModalPriceModal = styled.div`
   z-index: 100;
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 2rem;
+  gap: 1.5rem;
+
+  section {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    place-items: center;
+    gap: 0;
+  }
+
+  span {
+    font-size: small;
+    font-weight: 600;
+  }
+
+  .text {
+    width: 30%;
+    font-size: small;
+  }
+
+  .bar {
+    width: 100%;
+    height: 0.2px;
+    background: darkgray;
+    border: 1px solid darkgray;
+  }
+
+  .min-dot {
+    width: 15px;
+    height: 15px;
+    position: relative;
+    top: -6.5px;
+    left: -4px;
+    background-color: #ff5a60;
+    border-radius: 50%;
+  }
+
+  .max-dot {
+    width: 15px;
+    height: 15px;
+    position: relative;
+    top: -6.5px;
+    left: 97%;
+    background-color: #ff5a60;
+    border-radius: 50%;
+  }
 `;
 
 export const Backdrop = styled.div`

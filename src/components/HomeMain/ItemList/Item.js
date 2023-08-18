@@ -30,11 +30,13 @@ const Item = ({ item }) => {
   return (
     <S.Item onClick={() => goDetailPage({ item })}>
       <S.Image style={{ backgroundImage: `url(${url})` }} />
-      <S.Title>{item.title}</S.Title>
-      <S.Text>{item.host}</S.Text>
-      <S.Title>
-        {item.price} / 최대 {item.maxPeople} 명
-      </S.Title>
+      <S.Inform>
+        <S.Title>{item.title}</S.Title>
+        <S.Text>{item.host}</S.Text>
+        <S.Title>
+          ₩ {item.price} / 최대 {item.maxPeople} 명
+        </S.Title>
+      </S.Inform>
     </S.Item>
   );
 };
