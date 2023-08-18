@@ -10,11 +10,13 @@ const Profile = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
 
-  const clickHandler = () => {
+  const clickHandler = (event) => {
+    event.stopPropagation();
     setMenuOpen((prevState) => !prevState);
   };
 
-  const blurHandler = () => {
+  const blurHandler = (e) => {
+    e.preventDefault();
     setMenuOpen(false);
   };
 
@@ -28,16 +30,11 @@ const Profile = () => {
 
   return (
     <>
-      <S.Profile tabIndex={1} onClick={clickHandler}>
+      <S.Profile tabIndex={1} onClick={clickHandler} onBlur={blurHandler}>
         <Bar width="20" height="20" stroke="#646464" />
         <User width="30" height="30" stroke="#646464" fill="#646464" />
       </S.Profile>
-      {menuOpen && (
-        <AuthMenu
-          modalOpenHandler={modalOpenHandler}
-          blurHandler={blurHandler}
-        />
-      )}
+      {menuOpen && <AuthMenu modalOpenHandler={modalOpenHandler} />}
       {modalOpen && <ModalWrapper handleSignUpClose={modalCloseHandler} />}
     </>
   );
