@@ -15,11 +15,6 @@ const Profile = () => {
     setMenuOpen((prevState) => !prevState);
   };
 
-  const blurHandler = (e) => {
-    e.preventDefault();
-    setMenuOpen(false);
-  };
-
   const modalOpenHandler = () => {
     setModalOpen(true);
     setMenuOpen(false);
@@ -30,7 +25,7 @@ const Profile = () => {
 
   return (
     <>
-      <S.Profile tabIndex={1} onClick={clickHandler} onBlur={blurHandler}>
+      <S.Profile tabIndex={1} onClick={clickHandler}>
         <Bar width="20" height="20" stroke="#646464" />
         <User width="30" height="30" stroke="#646464" fill="#646464" />
       </S.Profile>
