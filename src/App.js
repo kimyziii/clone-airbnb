@@ -10,7 +10,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
   const [dataList, setDataList] = useState([]);
   const getDataList = () => {
-    fetch("http://localhost:3000/data/airbnb.json", {
+    fetch("https://clone-airbnb-nine.vercel.app/data/airbnb.json", {
       method: "GET",
     })
       .then((res) => res.json())

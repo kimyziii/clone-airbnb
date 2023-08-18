@@ -44,7 +44,7 @@ const DetailPage = () => {
   const [detailData, setDetailData] = useState([]);
 
   const getItemData = () => {
-    fetch('http://localhost:3000/data/airbnb.json',{
+    fetch('https://clone-airbnb-nine.vercel.app/data/airbnb.json',{
       method: 'GET',
     }).then(res => res.json())
     .then(data => {
