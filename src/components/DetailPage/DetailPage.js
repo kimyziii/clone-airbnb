@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/alt-text */
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Calendar from "react-calendar";
 import PriceModal from "./PriceModal";
 import "react-calendar/dist/Calendar.css";
@@ -11,7 +11,8 @@ import ShareIcon from "./icon/Share.svg";
 import BinHeartIcon from "./icon/BinHeart.svg";
 import HeartIcon from "./icon/Heart.svg"
 import River from "./icon/river.svg";
-import { useLocation } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
+import { Params } from "react-router-dom";
 
 const DetailPage = () => {
   //달력의 값 변경 및 초기화 적용
@@ -20,9 +21,11 @@ const DetailPage = () => {
   // const [datevalue2, setDateValue2] = useState(
   //   new Date(now.getFullYear(), now.getMonth() + 1)
   // );
+
   // 좋아요 버튼에 따른 상태 변경
   const [likeBtn, setLikeBtn] = useState(false);
   const changeLikebtn = () => {
+    alert('저장되었습니다!');
     setLikeBtn(!likeBtn);
   }
   // 공유하기 모달 기능 적용
@@ -30,10 +33,28 @@ const DetailPage = () => {
   const openShareModal = () => {
     setModalOpen(true);
   }
-  //
-  const location = useLocation();
-  const detailData = { ...location.state };
-  console.log("key", detailData.id);
+  // 클릭에 따른 데이터 가지고 오기 param값 적용 전
+  // const location = useLocation();
+  // const detailData = { ...location.state };
+  // console.log("key", detailData);
+
+  // 파람값 전달받아 데이터 가져오기
+  const param = useParams();
+
+  const [detailData, setDetailData] = useState([]);
+
+  const getItemData = () => {
+    fetch('http://localhost:3000/data/airbnb.json',{
+      method: 'GET',
+    }).then(res => res.json())
+    .then(data => {
+      setDetailData(data.data[param.itemId-1]);
+    })
+  }
+  useEffect(()=> {
+    getItemData();
+  },[detailData.length]);
+
 
   return (
     <>

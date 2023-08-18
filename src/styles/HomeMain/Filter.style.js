@@ -9,7 +9,7 @@ export const Filter = styled.div`
   background-color: white;
   width: 100vw;
   gap: 35px;
-  z-index: 2;
+  z-index: 98;
   top: 5rem;
 `;
 

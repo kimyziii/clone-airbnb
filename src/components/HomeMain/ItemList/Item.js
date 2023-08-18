@@ -8,23 +8,25 @@ const Item = ({ item }) => {
   // 클릭 시 상세페이지 이동 기능
   const navigate = useNavigate();
   const goDetailPage = ({ item }) => {
-    navigate("/detailpage", {
-      state: {
-        id: item.id,
-        title: item.title,
-        filter: item.filter,
-        place: item.place,
-        price: item.price,
-        maxPeople: item.maxPeople,
-        detailText: item.detailText,
-        host: item.host,
-        img1: item.img1,
-        img2: item.img2,
-        img3: item.img3,
-        img4: item.img4,
-        img5: item.img5,
-      },
-    });
+    navigate(`/detailpage/${item.id}`, 
+    // {
+    //   state: {
+    //     id: item.id,
+    //     title: item.title,
+    //     filter: item.filter,
+    //     place: item.place,
+    //     price: item.price,
+    //     maxPeople: item.maxPeople,
+    //     detailText: item.detailText,
+    //     host: item.host,
+    //     img1: item.img1,
+    //     img2: item.img2,
+    //     img3: item.img3,
+    //     img4: item.img4,
+    //     img5: item.img5,
+    //   },
+    // }
+    );
   };
 
   return (

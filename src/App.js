@@ -78,7 +78,7 @@ function App() {
         )}
         <Routes>
           <Route path="/" element={<HomeMain data={dataList} />}></Route>
-          <Route path="/detailpage" element={<DetailPage />}></Route>
+          <Route path="/detailpage/:itemId" element={<DetailPage />}></Route>
         </Routes>
         <Footer />
       </BrowserRouter>
