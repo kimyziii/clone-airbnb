@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const SiteContent = styled.div`
   width: 100vw;
-  width:100vh; 
+  width: 100vh;
   display: block;
   margin: 120px 20% 10% 20%;
   // padding: 100px 250px 100px 250px;
@@ -72,14 +72,16 @@ export const HostImg = styled.div`
   overflow: hidden;
   background-size: cover;
   border-radius: 35px;
-  padding: 10xp;
+  // padding: 10xp;
+  float: right;
+  margin: 10px;
 `;
 
 export const ImgArea = styled.div`
   display: flex;
   border-radius: 25px;
   overflow: hidden;
-`
+`;
 
 export const HotalInfoWrap = styled.div`
   display: flex;
@@ -87,7 +89,7 @@ export const HotalInfoWrap = styled.div`
 
 export const HotalInfo = styled.div`
   width: 60%;
-  display: flex;
+  display: block;
 `;
 
 export const MainInfo = styled.div`
@@ -104,4 +106,34 @@ export const Facilities = styled.div`
   display: flex;
   flex-direction: column;
   border-bottom: 2px solid black;
+  padding-top: 38px;
+  padding-bottom: 42px;
+`;
+
+export const BoldTitle = styled.span`
+  font-size: 22px;
+  font-weight: bold;
+`;
+
+export const ContentBox = styled.div`
+  margin-top: 10px;
+`;
+export const RoleDiv = styled.div`
+  display: flex;
+  margin-bottom: 20px;
+`;
+
+export const RoleTitle = styled.h3`
+  font-size: 16px;
+  font-weight: bold;
+`;
+
+export const IconImg = styled.img`
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+`;
+
+export const FacilitiesDiv = styled.div`
+  margin: 20px 0px 20px 0px;
 `;
