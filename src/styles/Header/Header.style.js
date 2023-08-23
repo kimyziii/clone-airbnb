@@ -143,7 +143,7 @@ export const NewSearchModalLocation_BG = styled.div`
   }
 `;
 export const NewSearchModalLocationModal = styled.div`
-  height: 23rem;
+  height: fit-content;
   width: 30%;
   margin-top: 12px;
   border-radius: 2rem;
