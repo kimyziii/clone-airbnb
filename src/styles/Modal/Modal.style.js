@@ -23,7 +23,7 @@ export const Title = styled.div`
 `;
 
 export const Content = styled.div`
-  height: 20rem;
+  height: fit-content;
   padding: 1rem;
   display: flex;
   flex-direction: column;
