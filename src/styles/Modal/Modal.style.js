@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Modal = styled.div`
   width: 45vw;
-  height: 45vh;
+  height: 37vh;
   background-color: white;
   border-radius: 1rem;
   position: absolute;
